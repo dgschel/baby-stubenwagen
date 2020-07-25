@@ -1,0 +1,45 @@
+<section class="vergleich-schlafmöglichkeiten-section">
+  <div class="container">
+    <div class="container-header">
+      <h2 class="mat-h2">Stubenwagen und seine alternativen</h2>
+      <p class="mat-body">
+        Es ist wichtig, die unterschiede zwischen ein Stubenwagen, einem Beistell- und Gitterbett zu kennen, damit dein
+        Baby den besten Schlaf erhält, den es dringend in der Wachstumsphase benötigt. Dabei spielen die Schlafqualität
+        und -länge eine entscheidene Rolle. Wir zeigen dir, worauf es ankommt und machen den Vergleich.
+      </p>
+    </div>
+    <div class="container-items" fxLayout="column">
+      <div *ngFor="let item of items" class="container-item" fxLayout="column" fxLayout.gt-xs="row"
+        fxLayoutAlign="space-between start" fxLayoutGap="50px">
+        <div fxFlex="50" class="item-header">
+          <h3 class="mat-h3">
+            <a [href]="item.link" target="_self" class="gtm-amazon-product"
+              [attr.data-category]="item.category">{{ item.title }}</a>
+          </h3>
+          <p class="mat-body">{{ item.description }}</p>
+          <p class="mat-small hint-text">Klicke auf die einzelnen Felder, um mehr zu erfahren</p>
+          <div class="container-accordion">
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>Sicherheit</mat-expansion-panel-header>
+                <p class="mat-body">{{ item.sicherheit }}</p>
+              </mat-expansion-panel>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>Merkmale</mat-expansion-panel-header>
+                <mat-list>
+                  <mat-list-item *ngFor="let merkmal of item.merkmale">{{ merkmal }}</mat-list-item>
+                </mat-list>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </div>
+        <div fxFlex="50" class="item-image">
+          <picture>
+            <source *ngFor="let img of item.images" [type]="img.type" [srcset]="img.imagePath" />
+            <img [src]="item.fallback" [alt]="item.alt">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

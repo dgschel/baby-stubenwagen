@@ -1,0 +1,175 @@
+.products-section {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.ratings {
+  color: orange;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.carousel-item {
+  box-sizing: border-box;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+.carousel-card {
+  margin: 0 12px;
+}
+
+.carousel-control {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #000;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-left {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  background-color: #fff;
+  color: #000;
+}
+
+.carousel-right {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  background-color: #fff;
+  color: #000;
+}
+
+.carousel-point {
+  list-style-type: none;
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.carousel-point li {
+  display: inline-block;
+  border-radius: 50%;
+  /* background: #6b6b6b; */
+  background: #e1e1e1;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  padding: 5px;
+  margin: 0 5px;
+  transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+  transition: .4s;
+  cursor: pointer;
+}
+
+.carousel-point li.active {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.carousel-image-wrapper {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-wrapper>a {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+}
+
+:host /deep/ .mat-card-header-text {
+  margin: 0 !important;
+}
+
+@media (max-width: 600px) {
+  :host /deep/ .products-section .ngucarousel {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .prev {
+    left: -10px;
+  }
+
+  .next {
+    right: -10px;
+  }
+}
+
+:host /deep/ .products-section .ngucarousel {
+  padding: 0 60px;
+}
+
+:host /deep/ .products-section .ngu-touch-container {
+  overflow: hidden;
+}
+
+.button-action {
+  color: #fff;
+  background-color: #f779b8;
+}
+
+/* styles for '...' */
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 20px;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 40px;
+}
+
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}

@@ -1,0 +1,20 @@
+.tipp-produkt-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.container-image img {
+  display: flex;
+  max-width: 100%;
+  width: 250px;
+  margin: auto;
+}
+
+.container-header h3 {
+  margin: 0;
+}
+
+.button-action {
+  color: #fff;
+  background-color: #f779b8;
+}

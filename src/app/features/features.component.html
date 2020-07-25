@@ -1,0 +1,77 @@
+<section class="features-section">
+  <div class="container">
+    <div class="container-header">
+      <h2 class="mat-h2">Was ist ein Stubenwagen?</h2>
+      <!-- <h3 class="mat-h2">Welche Schlafmöglichkeiten hat dein Baby?</h3> -->
+      <p class="mat-body">
+        Für dein Baby ist die bevorzugte Schlafmöglichkeit ein Stubenwagen. Neben den klassischen Beistell- und
+        Gitterbett ist der Stubenwagen die beste Wahl für ein erholsamen und gesunden Schlaf. Diese gibt es bereits
+        günstig im zweistelligen bereich zu
+        kaufen.
+      </p>
+      <p class="mat-small hint-text">Klicke auf den Pfeil, um mehr zu erfahren</p>
+    </div>
+    <div fxLayout="column" class="container-body">
+      <div class="container-inner">
+        <div class="container-wrapper" fxLayout="column" fxLayoutAlign="space-between start"
+          fxLayoutGap="10px">
+          <ng-container *ngFor="let item of items">
+            <div *ngIf="item.visible" class="container-item" fxLayout="column" fxLayout.gt-xs="row"
+              fxLayoutAlign="space-between start" fxLayoutGap="20px">
+              <div fxFlex="50" [fxFlexOrder]="item.textOrder">
+                <h3 class="mat-h3">{{ item.title }}</h3>
+                <p class="mat-body">{{ item.description }}</p>
+              </div>
+              <div fxFlex="50" class="container-image" [fxFlexOrder]="item.imgOrder">
+                <img [src]="item.img" [alt]="item.alt">
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <!-- <div class="container-inner">
+        <div class="container-wrapper" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between start"
+          fxLayoutGap="20px">
+          <div fxFlex="50" class="container-image">
+            <img src="assets/images/babystubenwagen-stubenwagen-babysitter-stroller.svg"
+              alt="babystubenwagen stubenwagen babysitter stroller">
+          </div>
+          <div fxFlex="50">
+            <h3 class="mat-h3">Beistellbett</h3>
+            <p class="mat-body">
+              Ein Beistelltbett unterscheidet sich gegenüber einem Stubenwagen vom seinem Aufbau. Während bei einem
+              Stubenwagen der Korb Oval und geflochten ist, wird bei einem Beistellbett Holz verwendet und ist auf einer
+              Seite offen. Deswegen wird dieser manchmal auch "Babybalkon" genannt. Dadurch schläft dein Baby ganz nah
+              bei dir und liegt immernoch in seinem eigenen Bett. Das hat auf dein Baby eine beruhigende Wirkung und
+              fühlt sich Geborgen.
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="container-inner">
+        <div class="container-wrapper" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between start"
+          fxLayoutGap="20px">
+          <div fxFlex="50">
+            <h3 class="mat-h3">Gitterbett</h3>
+            <p class="mat-body">
+              Das Gitterbett zählt zu den klassichen Schlafmöglichkeiten und erfräut sich einer großen Beliebtheit.
+              Dieser unterscheidet sich von den Stubenwagen und dem Beistellbett von seinem Aufbau und Größe. Die
+              meisten Gitterbettchen haben eine Breite von 70 - 80cm und eine Länge von 120 - 140cm und eignen sich bis
+              zu einem Alter von 4 Jahren für dein Baby. Danach kannst du es zu einem Jugendbett ausbauen lassen und
+              weiterhin nutzen.
+            </p>
+          </div>
+          <div fxFlex="50" class="container-image">
+            <img src="assets/images/babystubenwagen-stubenwagen-babysitter-baby.svg"
+              alt="babystubenwagen stubenwagen babysitter baby">
+          </div>
+        </div>
+      </div> -->
+      <div class="container-action-button" *ngIf="!isLast">
+        <button mat-raised-button mat-icon-button class="pulse" (click)="nextItem()">
+          <mat-icon>arrow_downward</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

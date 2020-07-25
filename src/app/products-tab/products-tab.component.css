@@ -1,0 +1,64 @@
+.tab-section {
+  padding: 20px;
+}
+
+.tab-icon {
+  width: 24px;
+  display: flex;
+}
+
+:host /deep/ .mat-tab-group.mat-primary .mat-ink-bar {
+  background-color: #f779b8;
+}
+
+.container-wrapper {
+  padding: 20px 0;
+}
+
+.carousel-point {
+  list-style-type: none;
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.carousel-point li {
+  display: inline-block;
+  border-radius: 50%;
+  /* background: #6b6b6b; */
+  background: #e1e1e1;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  padding: 5px;
+  margin: 0 5px;
+  transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+  transition: .4s;
+  cursor: pointer;
+}
+
+.carousel-point li.active {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.carousel-image-wrapper {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+}
+
+.button-action {
+  color: #fff;
+  background-color: #f779b8;
+}

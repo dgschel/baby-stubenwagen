@@ -1,0 +1,14 @@
+.brands-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.brand-logo {
+  max-width: 100%;
+  width: 120px;
+  margin: auto;
+}
+
+.container-body {
+  width: 100%;
+}

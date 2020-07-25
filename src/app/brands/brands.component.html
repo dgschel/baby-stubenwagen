@@ -1,0 +1,17 @@
+<section class="brands-section">
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="8px">
+    <div class="container-header mat-body">
+      <span>beliebte marken auf Amazon</span>
+    </div>
+    <div class="container-body" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="8px">
+      <div class="container-image" *ngFor="let item of items">
+        <a [href]="item.link" target="_self" class="gtm-amazon-brand" [id]="item.brand">
+          <picture>
+            <source *ngFor="let img of item.images" [type]="img.type" [srcset]="img.imagePath">
+            <img [src]="item.fallback" [alt]="item.alt" class="brand-logo">
+          </picture>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

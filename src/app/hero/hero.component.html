@@ -1,0 +1,17 @@
+<section class="hero-section">
+  <picture class="overlay-image container">
+    <source *ngFor="let item of items" [type]="item.type" [media]="item.breakpoint" [srcset]="item.imagePath">
+    <img src="assets/images/hero/baby-stubenwagen-gluecklich-spielen,w_1920.jpg"
+      alt="baby-stubenwagen-gluecklich-spielen" class="image img-responsive">
+    <div class="overlay">
+      <div fxLayout="column" fxLayoutAlign="center center" class="overlay-box">
+        <h1 class="mat-h1 headline">Finde den besten Stubenwagen für dein Baby</h1>
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <a href="https://amzn.to/38MQn00"
+            mat-raised-button target="_self" class="main-color gtm-amazon-family">Mehr informationen</a>
+          <span class="mat-h6 caption-text">*Sichere weiterleitung auf Amazon</span>
+        </div>
+      </div>
+    </div>
+  </picture>
+</section>
