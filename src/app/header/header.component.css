@@ -1,0 +1,62 @@
+.header {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  color: #fff;
+  background-color: #fff;
+  transition: top 400ms;
+}
+
+.header-toolbar {
+  padding: 0;
+}
+
+.logo {
+  /* display: block; */
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  background-color: #fff;
+  height: inherit;
+}
+
+.social-link-wrapper {
+  height: 100%;
+  padding: 0;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+mat-nav-list>a {
+  height: inherit;
+}
+
+mat-progress-bar {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+
+:host /deep/ .mat-progress-bar-buffer {
+  background-color: #ededed;
+}
+
+:host /deep/ .mat-progress-bar-fill::after {
+  background-color: #34a853;
+}
+
+:host /deep/ .mat-list-item-content {
+  padding: 0 8px !important;
+}

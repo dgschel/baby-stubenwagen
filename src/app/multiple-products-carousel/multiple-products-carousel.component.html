@@ -1,0 +1,57 @@
+<section class="products-section">
+  <div class="container">
+    <div class="container-header">
+      <h2 class="mat-h2" id="stubenwagen-top-5">Stubenwagen Top 5</h2>
+      <p class="mat-body">
+        Die Auswahl an verschiedenen Stubenwagen ist gigantisch und deswegen haben wir für dich eine Liste der besten
+        Stubenwagen erstellt, damit du ein Überblick hast und dich leichter zurecht findest. Die besten Stubenwagen sind
+        sorgfältig ausgewählt worden und spiegeln die Empfehlungen der Nutzer auf Amazon wider. Die <a
+          href="https://amzn.to/32qdMC5" class="gtm-amazon-product" data-category="Bestseller"
+          target="_self">Bestseller</a> kann man auf Amazon direkt einsehen.
+      </p>
+    </div>
+    <div class="container-body">
+      <div class="container-carousel">
+        <ngu-carousel #productCarousel [inputs]="carouselOptions" [dataSource]="products">
+          <ngu-item class="carousel-item" NguCarouselItem *nguCarouselDef="let item; let j = index;">
+            <mat-card class="carousel-card">
+              <div class="carousel-image-wrapper">
+                <a [href]="item.link" target="_self" class="gtm-amazon-product" [attr.data-category]="item.category">
+                  <picture>
+                    <source *ngFor="let img of item.images" [type]="img.type" [srcset]="img.imagePath">
+                    <img class="carousel-image" [src]="item.fallback" [alt]="item.alt">
+                  </picture>
+                </a>
+              </div>
+              <div class="card-content-wrapper">
+                <div class="ratings">
+                  <mat-icon *ngFor="let i of item.ratings">
+                    {{ i == 1 ? 'star' : ( i == 0.5 ? 'star_half' : 'star_border') }}
+                  </mat-icon>
+                </div>
+                <mat-card-content>
+                  <p class="mat-small block-with-text">{{ item.description }}</p>
+                </mat-card-content>
+              </div>
+              <mat-card-actions>
+                <span fxFlex></span>
+                <a [href]="item.link" target="_self" mat-raised-button class="button-action gtm-amazon-product"
+                  [attr.data-category]="item.category">Jetzt kaufen</a>
+              </mat-card-actions>
+            </mat-card>
+          </ngu-item>
+          <button mat-icon-button mat-raised-button NguCarouselPrev class="carousel-control prev">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+          </button>
+          <button mat-icon-button mat-raised-button NguCarouselNext class="carousel-control next">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>
+          <ul NguCarouselPoint class="carousel-point">
+            <li *ngFor="let i of productCarousel.pointNumbers; let j = index"
+              [class.active]="productCarousel.activePoint==j" (click)="productCarousel.moveTo(i)"></li>
+          </ul>
+        </ngu-carousel>
+      </div>
+    </div>
+  </div>
+</section>

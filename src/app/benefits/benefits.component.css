@@ -1,0 +1,12 @@
+.benefits-section {
+  padding: 20px;
+  /* background-color: #f8f9fa; */
+  background-color: #fff;
+}
+
+.image-container {
+  max-width: 100%;
+  width: 400px;
+  margin: auto;
+  display: block;
+}

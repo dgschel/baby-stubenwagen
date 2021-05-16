@@ -1,0 +1,68 @@
+.vergleich-schlafmöglichkeiten-section {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.container-item {
+  padding: 20px 0;
+  /* background-color: #ededed; */
+}
+
+.item-image,
+.item-image img {
+  width: 100%;
+  display: flex;
+}
+
+.item-image img {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.mat-expansion-panel {
+  box-shadow: none;
+  background: transparent;
+  background-color: #dadce0;
+  /* color: rgba(0, 0, 0, .87); */
+}
+
+.hint-text {
+  color: #5f6368;
+  font-weight: 500;
+}
+
+.mat-expanded {
+  background-color: #f779b8;
+  color: #fff;
+}
+
+.mat-expanded p.mat-body {
+  color: rgba(0,0,0,.87);
+}
+
+:host /deep/ .mat-expansion-panel-content {
+  background-color: #f8f9fa;
+}
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+  background-color: inherit;
+}
+
+.mat-expansion-panel-header.mat-expanded:focus {
+  background-color: #f779b8;
+  color: #fff;
+}
+
+:host /deep/ .mat-expansion-panel-header.mat-expanded:focus+.mat-expansion-indicator::after {
+  color: #fff;
+}
+
+:host /deep/ .mat-expansion-indicator::after,
+.mat-expansion-panel-header-description {
+  color: inherit;
+}
+
+/* :host /deep/ .mat-expansion-indicator::after,
+.mat-expansion-panel-header-description {
+  color: #fff;
+} */

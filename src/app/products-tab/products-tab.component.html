@@ -1,0 +1,177 @@
+<section class="tab-section">
+  <div class="container">
+    <div class="container-wrapper-head">
+      <h2 class="mat-h2" id="babybett-top-3">Die 3 besten Babybetten</h2>
+      <p class="mat-body">Für dein Baby gibt es viele Schlafmöglichkeiten und es ist wichtig, das passende Babybett von
+        beginn an auszuwählen, damit dein Baby den besten Schlaf erhält. Wir schauen uns den Stubenwagen, das Beistell-
+        und Gitterbett an und geben dir eine Empfehlung.</p>
+    </div>
+    <div class="container-wrapper-body"></div>
+    <mat-tab-group mat-stretch-tabs>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+            <img class="tab-icon" src="assets/images/baby-stroller.svg" alt="baby stroller icon">
+            <span>Stubenwagen</span>
+          </div>
+        </ng-template>
+        <ng-template matTabContent>
+          <div class="container-wrapper" fxLayout="column" fxLayout.gt-xs="row" fxFlexAlign="center center"
+            fxLayoutGap="20px">
+            <div class="container-carousel" fxFlexOrder.xs="2" fxFlex="50">
+              <ngu-carousel #productCarouselStubenwagen [inputs]="carouselOptions" [dataSource]="productsStubenwagen">
+                <ngu-item class="carousel-item" NguCarouselItem *nguCarouselDef="let item; let j = index;">
+                  <a target="_self" href="https://amzn.to/31HhsPf" class="gtm-amazon-product"
+                    data-category="Stubenwagen">
+                    <div class="carousel-image-wrapper">
+                      <picture>
+                        <source *ngFor="let img of item.images" [type]="img.type" [srcset]="img.imagePath">
+                        <img class="carousel-image" [src]="item.fallback" [alt]="item.alt">
+                      </picture>
+                    </div>
+                  </a>
+                </ngu-item>
+                <ul NguCarouselPoint class="carousel-point">
+                  <li *ngFor="let i of productCarouselStubenwagen.pointNumbers; let j = index"
+                    [class.active]="productCarouselStubenwagen.activePoint==j"
+                    (click)="productCarouselStubenwagen.moveTo(i)"></li>
+                </ul>
+              </ngu-carousel>
+              <div class="container-footer-action" fxHide.gt-xs>
+                <a mat-raised-button fxFlex.xs class="button-action gtm-amazon-product" data-category="Stubenwagen"
+                  target="_self" href="https://amzn.to/31HhsPf">
+                  Jetzt Kaufen</a>
+              </div>
+            </div>
+            <div class="container-header" fxFlexOrder.xs="1" fxFlex="50">
+              <h3 class="mat-h3">Stubenwagen von WALDIN</h3>
+              <p class="mat-body">
+                Der Stubenwagen von WALDIN ist ein Komplettes-Set. Es wird mit vielen wichtigen Zubehör geliefert, unter
+                anderem ein Korb mit Untergestell, Nestchen, Schleifen, Himmel, Decke und Kissen, Bettwäsche, eine
+                Schaumkernmatratze mit 4 cm Dicke und einem Moskitonetz. Die Auswahl ist mit 14 verschiedenen Farben und
+                Mustern beachtlich. Damit ist der Stubenwagen von WALDIN die perfekte Wahl für jeden, der ein besonders
+                hochwertigen und robusten Stubenwagen sucht.
+              </p>
+              <div class="container-footer-action" fxHide.xs>
+                <span fxFlex fxHide.xs></span>
+                <a mat-raised-button fxFlex.xs class="button-action gtm-amazon-product" data-category="Stubenwagen"
+                  target="_self" href="https://amzn.to/31HhsPf">
+                  Jetzt Kaufen</a>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+            <img class="tab-icon" src="assets/images/baby-rollayway-toy.svg" alt="baby rollaway toy icon">
+            <span>Beistellbett</span>
+          </div>
+        </ng-template>
+        <ng-template matTabContent>
+          <div class="container-wrapper" fxLayout="column" fxLayout.gt-xs="row" fxFlexAlign="center center"
+            fxLayoutGap="20px">
+            <div class="container-carousel" fxFlexOrder.xs="2" fxFlex="50">
+              <ngu-carousel #productCarouselSet [inputs]="carouselOptions" [dataSource]="productsSet">
+                <ngu-item class="carousel-item" NguCarouselItem *nguCarouselDef="let item; let j = index;">
+                  <a target="_self" href="https://amzn.to/31Ily9V" class="gtm-amazon-product"
+                    data-category="Komplettwiegenset">
+                    <div class="carousel-image-wrapper">
+                      <picture>
+                        <source *ngFor="let img of item.images" [type]="img.type" [srcset]="img.imagePath">
+                        <img class="carousel-image" [src]="item.fallback" [alt]="item.alt">
+                      </picture>
+                    </div>
+                  </a>
+                </ngu-item>
+                <ul NguCarouselPoint class="carousel-point">
+                  <li *ngFor="let i of productCarouselSet.pointNumbers; let j = index"
+                    [class.active]="productCarouselSet.activePoint==j" (click)="productCarouselSet.moveTo(i)"></li>
+                </ul>
+              </ngu-carousel>
+              <div class="container-footer-action" fxHide.gt-xs>
+                <a mat-raised-button fxFlex.xs class="button-action gtm-amazon-product"
+                  data-category="Komplettwiegenset" target="_self" href="https://amzn.to/31Ily9V">
+                  Jetzt Kaufen</a>
+              </div>
+            </div>
+            <div class="container-header" fxFlex="50" fxFlexOrder.xs="1">
+              <h3 class="mat-h3">Beistellbett von roba</h3>
+              <p class="mat-body">
+                Das Beistellbett roba ist ein Komplettwiegenset. Damit kannst du dein Baby wunderbar in den Schlaf
+                wiegen. Die
+                weichen und liebevoll gestalteten Kinderbettausstattungen sowie ein kuschelig gepolsteter Einhang machen
+                das Schlummern besonders bequem. Wenn die Bewegung einmal zuviel werden sollte, lasen sich die roba
+                Weigen schnell und einfach mit einem Feststellknopf fixieren.</p>
+              <div class="container-footer-action" fxHide.xs>
+                <span fxFlex fxHide.xs></span>
+                <a mat-raised-button fxFlex.xs class="button-action gtm-amazon-product"
+                  data-category="Komplettwiegenset" target="_self" href="https://amzn.to/31Ily9V">
+                  Jetzt Kaufen</a>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+            <img class="tab-icon" src="assets/images/baby-crib.svg" alt="baby crib icon">
+            <span>Gitterbett</span>
+          </div>
+        </ng-template>
+        <ng-template matTabContent>
+          <div class="container-wrapper" fxLayout="column" fxLayout.gt-xs="row" fxFlexAlign="center center"
+            fxLayoutGap="20px">
+            <div class="container-carousel" fxFlexOrder.xs="2" fxFlex="50">
+              <ngu-carousel #productCarouselGitterbett [inputs]="carouselOptions" [dataSource]="productsGitterbett">
+                <ngu-item class="carousel-item" NguCarouselItem *nguCarouselDef="let item; let j = index;">
+                  <a target="_self" href="https://amzn.to/2SwxUOi" class="gtm-amazon-product"
+                    data-category="Gitterbett">
+                    <div class="carousel-image-wrapper">
+                      <picture>
+                        <source *ngFor="let img of item.images" [type]="img.type" [srcset]="img.imagePath">
+                        <img class="carousel-image" [src]="item.fallback" [alt]="item.alt">
+                      </picture>
+                    </div>
+                  </a>
+                </ngu-item>
+                <ul NguCarouselPoint class="carousel-point">
+                  <li *ngFor="let i of productCarouselGitterbett.pointNumbers; let j = index"
+                    [class.active]="productCarouselGitterbett.activePoint==j"
+                    (click)="productCarouselGitterbett.moveTo(i)">
+                  </li>
+                </ul>
+              </ngu-carousel>
+              <div class="container-footer-action" fxHide.gt-xs>
+                <a mat-raised-button fxFlex.xs class="button-action gtm-amazon-product" data-category="Gitterbett"
+                  target="_self" href="https://amzn.to/2SwxUOi">
+                  Jetzt Kaufen</a>
+              </div>
+            </div>
+            <div class="container-header" fxFlex="50" fxFlexOrder.xs="1">
+              <h3 class="mat-h3">Gitterbett von lullaby</h3>
+              <p class="mat-body">
+                Das Gitterbett von lullaby werden in Europa nach strengen Sicherheitsstandards hergestellt und bietet
+                für dein Baby maximale Sicherheit. Die Seitengitter sind abnehmbar und kann damit leicht zu einem
+                Kinderbett verändert werden. Die Höhe ist verstellbar und kommt mit einer mitgelieferten Matratze. Die
+                Schaumstoffmatratze wurde mit Aloe Vera abgedeckt und den Matratzenüberzug ist sehr leicht zu waschen.
+                Zudem hat es ein Zahnschienen-Schutz für die Zähne deines Babys. Wir empfehlen dir für dein Baby das
+                Gitterbett von lullaby.
+              </p>
+              <div class="container-footer-action" fxHide.xs>
+                <span fxFlex fxHide.xs></span>
+                <a mat-raised-button fxFlex.xs class="button-action gtm-amazon-product" data-category="Gitterbett"
+                  target="_self" href="https://amzn.to/2SwxUOi">
+                  Jetzt Kaufen</a>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</section>
